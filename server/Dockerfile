@@ -33,5 +33,7 @@ COPY --from=base /pb_data /pb_data
 
 USER go-user:go-user
 
+EXPOSE 8090
+
 ENTRYPOINT [ "/main" ]
 CMD [ "serve", "--http", "0.0.0.0:8090" ]
